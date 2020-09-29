@@ -10,10 +10,6 @@ const interval = setInterval (() => {
         button.innerHTML = "AutoLike"
         button.classList.add("AutoLikeButton")
         inPhoto.appendChild(button)
-
-        //const nextPhoto = document.querySelector("._65Bje")
-        //const like = document.querySelector("article > div.eo2As > section.ltpMr.Slqrh > span.fr66n > button")
-        
         button.addEventListener("click", AutoLike())
     }
 }, 2000)
