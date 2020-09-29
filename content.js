@@ -1,41 +1,33 @@
 // Define variables 
 const profile = document.querySelector(".gmFkV")
 const interval = setInterval (() => {
-const inPhoto = document.querySelector("._2dDPU")
-    
+    const inPhoto = document.querySelector("._2dDPU")
     if(inPhoto){
         console.log("Photo here")
         clearInterval(interval)
 
-        const buttonLike = document.createElement("button")
-        
-        buttonLike.innerHTML = "AutoLike"
-        buttonLike.classList.add("AutoLikeButton")
-        inPhoto.appendChild(buttonLike)        
+        const button = document.createElement("button")
+        button.innerHTML = "AutoLike"
+        button.classList.add("AutoLikeButton")
+        inPhoto.appendChild(button)
 
-        const nextPhoto = document.querySelector("._65Bje")
-        const like = document.querySelector("article > div.eo2As > section.ltpMr.Slqrh > span.fr66n > button")
-
-        console.log(nextPhoto)
-        console.log(like)
+        //const nextPhoto = document.querySelector("._65Bje")
+        //const like = document.querySelector("article > div.eo2As > section.ltpMr.Slqrh > span.fr66n > button")
         
-        AutoLike()
+        button.addEventListener("click", AutoLike())
     }
 }, 2000)
 
-function AutoLike(){
-    buttonLike.addEventListener("click",() => {
-        like.click()
-        nextPhoto.click()
-    })
-}
-
 console.log(profile)
 
-
-
 // Define AutoClick for like in photos
-
-
+function AutoLike() {
+    while(True){
+        const nextPhoto = document.querySelector("._65Bje")
+        const like = document.querySelector("article > div.eo2As > section.ltpMr.Slqrh > span.fr66n > button")
+        like.click()
+        nextPhoto.click()
+    }
+}
 
 // Create a list for followers
