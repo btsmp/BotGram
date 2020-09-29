@@ -14,16 +14,21 @@ const inPhoto = document.querySelector("._2dDPU")
         inPhoto.appendChild(buttonLike)        
 
         const nextPhoto = document.querySelector("._65Bje")
-        const like = document.querySelector(".QBdPU")
+        const like = document.querySelector("article > div.eo2As > section.ltpMr.Slqrh > span.fr66n > button")
 
         console.log(nextPhoto)
         console.log(like)
         
-        // buttonLike.addEventListener("click", AutoLike())     
+        AutoLike()
     }
 }, 2000)
 
-
+function AutoLike(){
+    buttonLike.addEventListener("click",() => {
+        like.click()
+        nextPhoto.click()
+    })
+}
 
 console.log(profile)
 
@@ -31,9 +36,6 @@ console.log(profile)
 
 // Define AutoClick for like in photos
 
-/*function AutoLike(){
-    like.click()
-    nextPhoto.click()
-}
-*/
+
+
 // Create a list for followers
