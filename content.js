@@ -5,25 +5,24 @@ const interval = setInterval (() => {
     if(inPhoto){
         console.log("Photo here")
         clearInterval(interval)
-
+        
+        const nextPhoto = document.querySelector("._65Bje")
+        const like = document.querySelector("article > div.eo2As > section.ltpMr.Slqrh > span.fr66n > button")
         const button = document.createElement("button")
         button.innerHTML = "AutoLike"
         button.classList.add("AutoLikeButton")
         inPhoto.appendChild(button)
-        button.addEventListener("click", AutoLike())
+        
+        button.addEventListener("click", ()=> {
+            like.click()
+            nextPhoto.click()            
+        })
     }
 }, 2000)
 
 console.log(profile)
 
 // Define AutoClick for like in photos
-function AutoLike() {
-    while(True){
-        const nextPhoto = document.querySelector("._65Bje")
-        const like = document.querySelector("article > div.eo2As > section.ltpMr.Slqrh > span.fr66n > button")
-        like.click()
-        nextPhoto.click()
-    }
-}
+
 
 // Create a list for followers
